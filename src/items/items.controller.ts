@@ -19,7 +19,7 @@ export class ItemsController {
   async findAll(): Promise<Item[]> {
     return await this.itemsService.findAllItems();
   }
-  
+
   @Get(':id')
   async getById(@Param() param): Promise<Item> {
     return await this.itemsService.findById(param.id);
